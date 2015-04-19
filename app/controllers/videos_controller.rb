@@ -22,7 +22,6 @@ class VideosController < ApplicationController
   def get_upload_token
     temp_params = { title: params[:title], description: params[:description], category: 'Education',
                     keywords: [] }
-
     if current_user
       youtube = YouTubeIt::OAuth2Client.new(client_access_token: current_user.token,
                                             dev_key: ENV['GOOGLE_DEV_KEY'])
