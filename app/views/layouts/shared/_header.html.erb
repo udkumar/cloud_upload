@@ -1,0 +1,25 @@
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to "/", class: 'navbar-brand', target: "_blank"  do %>
+        <span class="glyphicon glyphicon-home" style="font-size: 32px;"> </span> 
+      <% end %>
+      <%= link_to "https://github.com/udkumar", class: 'navbar-brand', target: "_blank"  do %>
+          <span class="glyphicon glyphicon-qrcode" style="font-size: 32px;"> </span> 
+        <% end %>
+    </div>
+    <ul class="nav navbar-nav pull-right">
+    <% if session[:user_id].present? %>
+      <li style="margin-top:6%;"><span class="glyphicon glyphicon-user"> <%= User.find(session[:user_id]).name %></span>
+      </li>
+    <% end %>
+      <li>
+        <% if session[:user_id].present? %>
+         <%= link_to 'Logout', logout_path %>
+        <% else %>
+          <%= link_to 'Login with Google', '/auth/google_oauth2' %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

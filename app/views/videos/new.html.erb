@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h1>
+  	<% if session[:user_id].present? %>
+  		<span class="glyphicon glyphicon-upload"></span>
+  	<% else %>
+  		<span class="glyphicon glyphicon-lock"></span>
+  	<% end %>
+  </h1>
+</div>
+
+<% if current_user %>
+  <%= render 'form' %>
+<% else %>
+  <p>Please <%= link_to 'authorize', '/auth/google_oauth2' %> your Google account.</p>
+<% end %>
