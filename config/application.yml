@@ -1,5 +1,3 @@
-
-
 SECRET_KEY_BASE:	'f285d6989f7131b5aa934ffc884cf105a1e5b502dd67d52dbefb54716c2b2a56f2f904a8242714bbc6fa79c230bd8ba5548f3a526cd8de8c127e4dbb34fbbdd1'
 GOOGLE_CLIENT_SECRET:	'_NudPzWLuFoccfbtBeqPi6rd'
 GOOGLE_CLIENT_ID:	'470822917737-0i7tcdc3fojdtdg9hed62fnhibfdnupp.apps.googleusercontent.com'
