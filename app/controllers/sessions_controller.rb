@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
   def create
     auth = request.env['omniauth.auth']
+    byebug
     user = User.find_or_initialize_by(uid: auth['uid'])
-    user.token = auth['credentials']['token']
+    user.token = auth['credentials']['refresh_token']#['token']
     user.name = auth['info']['name']
     user.save
     session[:user_id] = user.id
