@@ -23,6 +23,7 @@ group :production do
 end
 gem 'figaro'
 gem 'devise'
+gem 'forward', '~> 1.1.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
