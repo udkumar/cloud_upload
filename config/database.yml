@@ -26,9 +26,11 @@ test:
   database: yt_test
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: morning-cove-2703
-  pool: 5
-  username: morning-cove-2703
-  password: 
+  <<: *default
+  database: yt_production
+  # adapter: postgresql
+  # encoding: unicode
+  # database: morning-cove-2703
+  # pool: 5
+  # username: morning-cove-2703
+  # password: 
